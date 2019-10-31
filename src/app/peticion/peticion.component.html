@@ -1,0 +1,9 @@
+<p>peticion works!</p>
+
+<p>Precio minimo <input [(ngModel)]=this.peticionService.precioMin> €</p>
+<p>Precio maximo <input [(ngModel)]=this.peticionService.precioMax> €</p>
+<div class="price-slider"> 
+    <input [(ngModel)]="this.peticionService.precioMin" min="0" max="100" step="0.5" type="range">
+    <input [(ngModel)]="this.peticionService.precioMax" min="0" max="100" step="0.5" type="range">
+</div>
+<button (click)="this.peticionService.updatePriceLabels()">Pulsa</button>
